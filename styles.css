@@ -280,3 +280,43 @@ main {
     color: white;
     border: 1px solid white;
 }
+
+@media (max-width: 768px) {
+
+    /* Esconde a sidebar no celular */
+    .sidebar {
+        display: none;
+    }
+
+    /* Navbar empilha os itens */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Search ocupa a largura toda */
+    .search {
+        width: 100%;
+    }
+
+    /* Main ocupa a tela toda já que sidebar sumiu */
+    .main-content {
+        margin: 5px;
+        padding: 20px;
+    }
+
+    /* Grid vira 2 colunas no celular */
+    .artistas-grid,
+    .albuns-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Banner com texto menor */
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 12px;
+    }
+}
